@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ポートフォリオ｜M.T</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #f5f5f5;
+}
+
+header {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+section {
+  padding: 50px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+h2 {
+  border-left: 5px solid #333;
+  padding-left: 10px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  margin-top: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* 横並び画像 */
+.card img.side {
+  width: 45%;
+  margin: 5px;
+}
+
+.card {
+  text-align: left;
+}
+
+.card img.side,
+.card img.work-img,
+.card img.vertical {
+  display: block;
+  margin: 10px auto;
+}
+
+
+
+/* 作品画像 */
+.card img.work-img {
+  width: 50%;
+  max-width: 220px;
+  display: block;
+  margin: 10px auto;
+}
+
+/* 詳細 */
+.detail {
+  display: none;
+  margin-top: 10px;
+  background: #fafafa;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+
+.detail.active {
+
+  display: block;
+
+}
+
+
+button {
+  padding: 10px 15px;
+  border: none;
+  background: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* マウスを乗せたときに変化 */
+button:hover {
+  background: #555;
+}
+
+/* 画像にマウスを乗せたときに「指マーク」にする */
+.card img.vertical {
+  width: 80%;
+  max-width: 500px;
+  display: block;
+  margin: 10px auto;
+  cursor: pointer;
+}
+
+.card img.vertical:hover {
+  transform: scale(1.03);
+  transition: 0.2s;
+}
+
+
+.click-open {
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.click-open:hover {
+  transform: scale(1.03);
+  opacity: 0.9;
+}
+
+
+
+@media (max-width: 768px) {  /* タブレットにも対応 */
+
+  header {
+
+    padding: 30px 10px;
+
+  }
+
+
+section {
+
+  padding: 30px 10px;
+}
+
+.card img.side {
+  
+  width: 100%;
+
+}
+
+
+.card img.work-img {
+
+  width: 70%;
+
+}
+
+.card img.vertical {
+
+  width: 95%;
+
+ }
+
+}
+ 
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+
+justify-content: center;  /* 中央寄せ */
+align-items: center;      /* 中央寄せ */
+
+}
+
+.modal.active {
+  display: flex;
+}
+
+.modal-content {
+
+  max-width: 90%;
+  max-height: 90%;
+  margin: 0;
+  border-radius: 10px;
+  animation: zoom 0.2s ease;
+
+  object-fit: contain;
+
+}
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: white;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+
+
+@keyframes zoom {
+  from { transform: scale(0.8); }
+  to { transform: scale(1); }
+}
+
+
+</style>
+</head>
+
+
+
+
+<body>
+
+<header>
+
+  <h2>業務効率化ツールの開発経験があります</h2>
+
+  <h1>M.T</h1>
+
+<p>VBAで作業時間を75%削減（40分 → 10分） / Javaでアプリ開発</p>
+
+</header>
+
+
+
+<section>
+
+<h2>自己紹介</h2>
+<div class="card">
+<p>
+20年間の水泳指導経験を経て、未経験からIT分野へ転向しました。<br><br>
+
+現在も継続して学習に取り組み、業務効率化ツールの開発やゲーム制作を通してスキル向上に努めています。<br><br>
+
+現場の課題を見つけ、仕組みから改善することを得意としています。<br><br>
+
+Javaによる簡単なアプリケーション開発が可能です。<br><br>
+
+特に、Excel業務やイベント運営など「手作業が多い現場の効率化」を得意としています。
+</p>
+
+<button onclick="toggle('intro1')">詳細を見る</button>
+
+<div id="intro1" class="detail">
+<p>
+■ 学習内容<br>
+
+・VBA：業務効率化ツール開発（実務改善経験あり）<br>
+
+・Java：ゲーム・アプリ開発<br>
+
+・HTML / CSS / JavaScript：ポートフォリオ制作<br>
+
+・PowerPointイベントチラシ制作
+</p>
+
+
+
+■ 学習姿勢<br>
+AIを活用しながら学習を進めており、現在は初学者として基礎理解を深めています。<br>
+簡単な修正や実装ができるよう取り組んでいます。<br><br>
+
+■ 実績<br>
+支援機関にて備品管理を改善し、業務効率化に貢献しました。<br><br>
+
+■ 特徴<br>
+物事の仕組みを理解し、改善することに強い興味があります。
+</p>
+</div>
+</div>
+
+</section>
+
+<section>
+
+<h2>作品</h2>
+
+
+
+
+
+
+
+
+<div class="card">
+<h3>デスクトップ整理ツール</h3>
+<img src="organize1.png" class="work-img click-open">
+<img src="organize2.png" class="work-img click-open">
+
+<p>
+使用技術：VBA<br>
+制作時間：約4時間<br><br>
+</p>
+
+<button onclick="toggle('intro9')">詳細を見る</button>
+
+<div id="intro9" class="detail">
+<p>
+■ 制作背景<br>
+デスクトップにファイルが蓄積し、<br>
+
+・必要ファイルを探す時間が増える<br>
+・同名ファイル管理が煩雑になる<br>
+・手作業整理によるミスが発生する<br>
+
+という課題がありました。　そこで、<br>
+『ファイル整理を自動化し、業務効率を改善する』<br>
+ことを目的としてこのツールを開発しました。<br><br>
+
+■ 主な機能<br>
+・ファイル自動分類<br>
+・重複ファイル回避<br>
+・エラーログ管理<br>
+・デスクトップ整理自動化<br><br>
+
+■ 改善過程<br>
+①単純シンプル整理<br>
+②エラー時でも処理停止しない<br>
+③ログ管理による原因追跡<br>
+④重複対応（上書き防止機能）<br>
+⑤成功件数／失敗件数表示<br>
+⑥「整理する」ボタンを追加することによりVBA未経験者でもワンクリックで利用可能な構成に改善<br>
+⑦整理完了後に保存先フォルダを即時確認できるよう「Organizedフォルダを開く」導線を追加
+
+</p>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="card">
+<h3>ビンゴ集計ツール</h3>
+<img src="Bingo-score.png" class="vertical click-open">
+<p>
+使用技術：VBA<br>
+制作時間：約15時間<br><br>
+</p>
+
+<button onclick="toggle('intro7')">詳細を見る</button>
+
+<div id="intro7" class="detail">
+<p>
+■ 制作背景<br>
+イベントにおけるビンゴ集計作業の手作業ミスを削減し、当日の運営負担軽減を目的として制作しました。<br><br>
+
+■ 工夫した点<br>
+手作業では約40分かかっていた集計作業を自動化し、約10分まで短縮して作業時間を75%削減しました。<br><br>
+
+また、参加人数の増減に対応できるよう設計し、イベント当日でも柔軟に運用できる仕組みにしています。
+</p>
+</div>
+</div>
+
+
+
+
+
+
+
+<div class="card">
+<h3>トレーニングアプリ</h3>
+<img src="Training-app.png" class="work-img click-open">
+
+<p>
+使用技術：Java<br>
+制作時間：約5時間<br><br>
+</p>
+
+<button onclick="toggle('intro8')">詳細を見る</button>
+
+<div id="intro8" class="detail">
+<p>
+■ 制作背景<br>
+自身の筋力トレーニング管理を効率化するために制作しました。<br><br>
+
+■ 工夫した点<br>
+消費カロリーの自動計算機能を実装し、入力の手間を軽減しています。<br><br>
+
+また、カロリーが未入力の場合は、必要な情報をすぐに確認できるよう、<br>
+外部サイトへ遷移できる導線を設計しました。<br><br>
+
+■ 今後の展望<br> 
+
+ユーザー目線での使いやすさや継続して利用しやすい設計を意識し、改善を重ねていく予定です。
+</p>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="card">
+<h3>ビンゴカード作成ツール</h3>
+<img src="Bingo.png" class="work-img click-open">
+<p>
+使用技術：VBA<br>
+制作時間：約5時間<br><br>
+</p>
+
+<button onclick="toggle('intro6')">詳細を見る</button>
+
+<div id="intro6" class="detail">
+<p>
+■ 制作背景<br>
+イベント準備におけるビンゴカード作成の手間を削減するために制作しました。<br><br>
+
+■ 工夫した点<br>
+参加者20名を想定し、予備を含めた30枚のカードを自動生成できるよう設計しました。<br><br>
+
+また、すべて異なる配置になるようシャッフル処理を実装し、<br>
+手作業なしで短時間に準備が完了する仕組みにしています。
+</p>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="card">
+<h3>イベントチラシ</h3>
+<img src="fes.png" class="work-img click-open">
+
+<p>
+使用技術：PowerPoint<br>
+制作時間：約5時間<br><br>
+</p>
+
+<button onclick="toggle('intro5')">詳細を見る</button>
+
+<div id="intro5" class="detail">
+<p>
+■ 制作背景<br>
+オフィスワークシミュレーションの企画課にて、イベントの企画立案から制作まで担当しました。<br><br>
+
+当初は3名それぞれ異なる企画案があり、1案に絞る予定でしたが、<br>
+各案の良さを活かすことでより魅力的な企画になると考え、統合案を提案しました。<br><br>
+
+その結果、メンバー全員の意見を反映したイベントとして実現することができました。<br><br>
+
+
+■ 工夫した点<br>
+参加者が直感的に内容を理解できるよう、視覚的に分かりやすいデザインと構成を意識しました。<br><br>
+
+その結果、当日は想定の約1.5倍の参加者増加につながりました。<br><br>
+
+また当日は司会も担当し、アドリブ対応を含め、参加者・運営双方が楽しめる進行を意識しました。
+</p>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="card">
+<h3>へびゲーム</h3>
+<img src="snake-game1.png" class="side click-open">
+<img src="snake-game2.png" class="side click-open">
+
+<p>
+使用技術：Java<br>
+制作時間：約50時間<br><br>
+</p>
+
+<button onclick="toggle('intro3')">詳細を見る</button>
+
+<div id="intro3" class="detail">
+<p>
+■ 制作背景<br>
+ゲームの動作構造を理解するため、学習者としての視点で制作しました。<br><br>
+
+■ 工夫した点<br>
+プレイヤーが視覚的に楽しめるよう、へびがカラフルな果実を食べると同じ色で成長する仕組みを実装しました。<br><br>
+
+また、舌を伸ばして毒きのこを排除できるアクションを追加し、ゲーム性を高めています。<br><br>
+
+さらに、当たり判定の処理を工夫し、毒の実を食べた際にはドクロに変化して爆発する演出を加えることで、<br>
+ゲームオーバーが直感的に伝わるよう設計しました。
+</p>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="card">
+<h3>テトリス</h3>
+<img src="Tetris.png" class="work-img click-open">
+
+<p>
+使用技術：VBA<br>
+制作時間：約15時間<br><br>
+</p>
+
+<button onclick="toggle('intro4')">詳細を見る</button>
+
+<div id="intro4" class="detail">
+<p>
+■ 制作背景<br>
+VBAでもゲームを制作できるか検証する目的で開発しました。<br><br>
+
+■ 工夫した点<br>
+同じ形のテトリミノでも複数の色を使用することで、プレイヤーが瞬時に判断できるよう工夫しています。<br><br>
+
+また、回転時にブロックが壁にめり込まないよう、「壁キック処理」を実装し、操作性を向上させました。
+</p>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+
+function toggle(id) {
+  const el = document.getElementById(id);
+  el.classList.toggle("active");
+}
+
+window.addEventListener("DOMContentLoaded", function () {
+  const images = document.querySelectorAll(".click-open");
+
+  const modal = document.getElementById("modal");
+  const modalImg = document.getElementById("modalImg");
+  const closeBtn = document.getElementById("modalClose");
+
+
+// 画像クリックでモーダル表示
+  images.forEach(function (img) {
+    img.addEventListener("click", function () {
+
+      // 開く 
+      modal.classList.add("active");
+
+
+
+      modalImg.src = this.src;
+
+    });
+
+  });
+
+
+// 閉じるボタン
+closeBtn.addEventListener("click", function () {
+      // 閉じる
+      modal.classList.remove("active");
+});
+
+
+// 背景クリックでも閉じる
+modal.addEventListener("click", function (e) {
+  if (e.target === modal) {
+    modal.classList.remove("active");
+  }
+ });
+});
+
+
+
+</script>
+
+
+<!-- 画面上に拡大表示 -->
+
+<div id="modal" class="modal">
+  <span id="modalClose" class="modal-close">&times;</span>
+  <img id="modalImg" class="modal-content">
+</div>
+
+
+</body>
+</html>
